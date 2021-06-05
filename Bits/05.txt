@@ -1,0 +1,19 @@
+<div id="di1hang">
+	<div style="border: 1px solid #000;height: 300px;width: 70%;
+			float:left;min-width: 750px;" >
+	<!--  任务申报面板  -->
+	</div>
+	<div  style="border: 1px solid #000;height: 300px;width:29%;float:right;" >
+	<!--  考勤面板  -->
+	</div>
+</div>
+<div style="padding-top: 15px;clear:both;" id="di2hang">
+	<div class="panel panel-default" 
+		style="border: 1px solid #000;height: 500px;width:70%;float: left;">
+	<!--  备忘录展示面板  -->
+	</div>
+	<div class="calendar hidden-print" 
+			style="border: 1px solid #000;height: 500px;width: 29%;float: right;">
+	<!--  备忘录日历  -->
+	</div>
+</div>

@@ -1,0 +1,22 @@
+ @RequestMapping(value="ckin")
+@ResponseBody
+public Map<String,Object> ckin (HttpServletRequest request,CheckingIn ckin){
+	Map<String,Object> result = new HashMap<String, Object>();
+	String username = (String)request.getSession().getAttribute("UserName");
+	ckin.setCkin_id(UUID.randomUUID().toString());
+	ckin.setUsername(username);
+	Date today = new Date();
+	sdf.applyPattern("yyyy-MM-dd");
+	ckin.setCkin_date(sdf.format(today));
+	sdf.applyPattern("hh:mm:ss");
+	ckin.setCkin_times(sdf.format(today));
+	if (ckinService.ckin(ckin)==1){						//判断打卡是否成功
+		result.put("success", true);						//打卡成功success值为true
+		result.put("msg", "打卡时间:"+sdf.format(today));	//返回消息
+	}else{
+		result.put("success", false);						//打卡失败success值为false
+		result.put("msg", "每天打卡不得超过八次:"+sdf.format(today));	//返回失败消息
+	}
+	
+	return result;
+}

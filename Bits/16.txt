@@ -1,0 +1,13 @@
+public Map<String,Object> selectMemorandum(String username){
+		
+		Map<String,Object> result = new HashMap<>();
+		
+		String sql = "SELECT memo_id as id,memo_xqzs as xqzs,memo_ylzs as ylzs"
+				+ ",memo_title as title,memo_content as description,memo_year as year"
+				+ ",memo_month as month,memo_day as day FROM memorandum "
+				+ "WHERE username = ?";
+		List<Map<String, Object>> list = jdbc.queryForList(sql,username);
+		result.put("events", list);
+		
+		return result;
+	}

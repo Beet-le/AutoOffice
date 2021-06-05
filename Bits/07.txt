@@ -1,0 +1,23 @@
+<div>
+     <!--  这个星永远都不会是空心，注意span的Id命名，是按规律1、2、3、4、5排序下去。  -->
+	<a href="javascript:void(0)" onclick="starYxj(1);">
+	<span id="starYxj1" class="glyphicon glyphicon-star"></span>
+	</a>
+     <!--  空心星  -->
+	<a href="javascript:void(0)" onclick="starYxj(2);">
+	<span id="starYxj2" class="glyphicon glyphicon-star-empty"></span>
+	</a>
+     <!--  空心星  -->
+	<a href="javascript:void(0)" onclick="starYxj(3);">
+	<span id="starYxj3" class="glyphicon glyphicon-star-empty"></span>
+	</a>
+     <!--  空心星  -->
+	<a href="javascript:void(0)" onclick="starYxj(4);">
+	<span id="starYxj4" class="glyphicon glyphicon-star-empty"></span>
+	</a>
+     <!--  空心星  -->
+	<a href="javascript:void(0)" onclick="starYxj(5);">
+	<span id="starYxj5" class="glyphicon glyphicon-star-empty"></span>
+     </a>
+</div>
+<input readonly="readonly" type="hidden" name="plan_yxj" id="plan_yxj" value="1">

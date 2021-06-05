@@ -1,0 +1,10 @@
+var calendar = {
+
+	init: function(parmJson1) {
+		//初始化备忘录 
+	},
+
+	startCalendar: function() {
+    		//初始化日历
+  }
+};

@@ -1,0 +1,17 @@
+.leftMeun {
+    background: #000000 none repeat scroll center bottom;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    width: 200px;
+}
+#rightContent {
+    box-sizing: border-box;
+    clear: both;
+    color: #717592;
+    float: left;
+    min-height: 500px;
+    min-width: 100%;
+    overflow-x: hidden;
+    padding-left: 200px;
+}

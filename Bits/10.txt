@@ -1,0 +1,16 @@
+	public int savePlanWork (PlanWork planWork){
+		//SQL语句，向plan_work表插入一条数据
+		String saveSql = "INSERT INTO plan_work (plan_id,plan_content,plan_title,"
+					   + "plan_creat,plan_to,plan_creatime,plan_updatetime,plan_flag,"
+					   + "plan_update,plan_yxj,plan_fzd,plan_start,plan_end) "
+					   + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		//根据以上SQL语句，给出对应参数
+		int i = jdbc.update(saveSql  ,planWork.getPlan_id(),planWork.getPlan_content(),
+							planWork.getPlan_title(),planWork.getPlan_creat(),
+							planWork.getPlan_to(),planWork.getPlan_creatime(),
+							planWork.getPlan_updatetime(),planWork.getPlan_flag(),
+							planWork.getPlan_update(),planWork.getPlan_yxj(),
+							planWork.getPlan_fzd(),planWork.getPlan_start(),
+							planWork.getPlan_end());
+		return i;
+	}

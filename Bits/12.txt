@@ -1,0 +1,54 @@
+<div style="padding-top: 15px;clear:both;" id="di2hang">
+			<div class="panel panel-default" style="border: 1px solid #000;
+			height: 500px;width:70%;float: left;">
+				<div class="panel-heading">
+					<strong>备忘录</strong>
+				</div>
+				<div class="panel-body">
+					<div class="list" >
+			            <div data-number="1" date-year="1" date-month="1" date-day="1" 
+			            class="day-event" style="display: block;">
+			            <a class="close fontawesome-remove" href="#"></a>
+			            <h2 class="title">备忘录用户手册</h2>
+			            <p>
+			            	<ul>
+			            		<li>
+			            			1.增加备忘录,双击右侧日历,填写要记录的事情,保存就可以咯.
+			            		</li>
+			            		<li>
+			            			2.支持heml标签,目前只支持p标签,与style的color属性
+			            			,方便您更灵活的排版,不可以使用其他标签,否则无法修改.
+			            		</li>
+			            		<li>
+			            			2.最后感谢您使用备忘录.
+			            		</li>
+			            	</ul>
+			            </p><label class="check-btn"></label></div>
+			        </div>
+		        </div>
+			</div>
+			<div class="calendar hidden-print" style="border: 1px solid #000;
+			height: 500px;width: 29%;float: right;">
+	          <header style="padding-top: 8px;">
+	            <h2 class="month" ></h2>
+	            <a class="btn-prev fontawesome-angle-left" href="javascript:void(0);">
+	            <span class="glyphicon glyphicon-chevron-left"></span>
+	            </a>
+	            <a class="btn-next fontawesome-angle-right" href="javascript:void(0);">
+	            <span class="glyphicon glyphicon-chevron-right"></span>
+	            </a>
+	          </header>
+	          <table style="min-width: 450px" >
+	            <thead class="event-days">
+	              <tr></tr>
+	            </thead>
+	            <tbody class="event-calendar">
+	              <tr class="1"></tr>
+	              <tr class="2"></tr>
+	              <tr class="3"></tr>
+	              <tr class="4"></tr>
+	              <tr class="5"></tr>
+	            </tbody>
+	          </table>
+	        </div>
+</div>

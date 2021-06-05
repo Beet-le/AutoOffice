@@ -1,0 +1,11 @@
+function getJsonData(){
+	$.ajax({
+		type:"GET",						//使用get方法请求
+		url:basePath+"findAllMemorandum", //请求路径
+		dataType:"json",					//返回格式 
+		async:false,						//是否为异步
+		success:function (data){			//参数返回后执行该方法
+			calendar.init(data);			//初始化备忘录
+		}
+	})
+}

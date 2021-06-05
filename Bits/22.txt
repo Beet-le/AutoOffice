@@ -1,0 +1,27 @@
+	public List<Map<String,Object>> findMonthCkin (String username
+			,String start,String end){
+		List<Map<String, Object>> resultList = new ArrayList<>();
+		
+		String sql = "SELECT ckin_id,ckin_content,ckin_times,ckin_date,username FROM "
+				+ "checking_in WHERE username = ? AND ckin_date >= ? AND ckin_date <= ?";
+		
+		List<Map<String, Object>> tempList = jdbc.queryForList(sql,username,start,end);
+		
+		for (Map<String, Object> temParm : tempList){
+			String ckinTimes = (String)temParm.get("ckin_times");
+			String[] ckins = ckinTimes.split(",");
+			for (String ckin : ckins){
+				Map<String,Object> map = new HashMap<String, Object>();
+				map.put("title", ckin);
+				map.put("start", temParm.get("ckin_date"));
+				if (temParm.get("ckin_content")!=null){
+					map.put("content", temParm.get("ckin_content"));
+				}else{
+					map.put("content", "");
+				}
+				resultList.add(map);
+			}
+		}
+		
+		return resultList;
+	}

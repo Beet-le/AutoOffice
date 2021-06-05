@@ -1,0 +1,15 @@
+<div class="modal fade" data-backdrop="false" id="rwDialog" style="z-index: 0;">
+	<div class="modal-dialog" >
+		<div class="modal-content">
+			<div class="modal-header">
+				<!--  弹出框标题  -->
+			</div>
+			<div class="modal-body">
+				<!--  弹出窗内容，表单  -->
+			</div>
+			<div class="modal-footer">
+				<!--  底部  -->
+			</div>
+		</div>
+	</div>
+</div>

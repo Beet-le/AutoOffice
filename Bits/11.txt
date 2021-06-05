@@ -1,0 +1,36 @@
+	public List<Map<String,Object>> selectByPlanTo (Integer page,Integer offset
+			,String username,String plan_flag){
+		List<Map<String,Object>> result = new ArrayList<Map<String,Object>>();
+		//根据plan_to与flag查找任务，1申报中,2同意,3不同意
+		String sql = "SELECT plan_id," + "plan_content,plan_title,plan_creat,plan_to,"
+		           + "plan_creatime,plan_updatetime,plan_flag,plan_update,plan_yxj,"
+			       + "plan_fzd,plan_start,plan_end,wxname FROM plan_work pw LEFT JOIN "
+	               + "sys_login sl ON pw.plan_creat = sl.username "
+				   + "where plan_to = ? AND plan_flag= ? ORDER BY "
+				   + "plan_creatime DESC LIMIT ?,?";
+		//设置默认的偏移量
+		if (offset == null){
+			offset = 7;
+		}
+		//设置页数
+		if (page == null){
+			page = 0;
+		}
+		//执行SQL语句
+		result = jdbc.queryForList(sql,username,plan_flag,page,offset);
+		//SimpleDateFormat sdf日期格式化
+		sdf.applyPattern("yyyy-MM-dd hh:mm:ss");
+		//格式化时间格式
+		for (Map<String, Object> map : result){
+			Timestamp plan_creatime = (java.sql.Timestamp)map.get("plan_creatime");
+			map.put("plan_creatime", sdf.format(new Date(plan_creatime.getTime())));
+			Timestamp plan_updatetime = (java.sql.Timestamp)map.get("plan_updatetime");
+			map.put("plan_updatetime", sdf.format(new Date(plan_updatetime.getTime())));
+			Timestamp plan_start = (java.sql.Timestamp)map.get("plan_start");
+			map.put("plan_start", sdf.format(new Date(plan_start.getTime())));
+			Timestamp plan_end = (java.sql.Timestamp)map.get("plan_end");
+			map.put("plan_end", sdf.format(new Date(plan_end.getTime())));
+		}
+		
+		return result;
+	}

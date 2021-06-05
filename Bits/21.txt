@@ -1,0 +1,10 @@
+	@RequestMapping(value="monthCkin")
+	@ResponseBody
+	public List<Map<String,Object>> monthCkin(HttpServletRequest request,String start
+			,String end,String username) throws ParseException{
+		List<Map<String,Object>> result = new ArrayList<>();
+		
+		result = ckinService.findMonthCkin(username, start, end);
+		
+		return result;
+	}

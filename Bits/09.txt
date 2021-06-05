@@ -1,0 +1,37 @@
+	@Resource
+	PlanWorkService ps;   //Service 注入
+	
+	@RequestMapping("/savePlanWork")
+	public ModelAndView savePlanWork (HttpServletRequest request,PlanWork planWork){
+		
+		ModelAndView mav = new ModelAndView();
+		
+		HttpSession session = request.getSession();
+		String username = (String)session.getAttribute("UserName");
+		
+		//填充实体类，设置ID
+		planWork.setPlan_id(UUID.randomUUID().toString());
+		//创建人
+		planWork.setPlan_creat(username);
+		//时间格式转化
+		sdf.applyPattern("yyyy-MM-dd hh:mm:ss");
+		//设置创建时间
+		planWork.setPlan_creatime(sdf.format(new Date()));
+		//根据用户名获取真实姓名
+		Map<String, Object> result=syspluService
+				                            .getWxnameByUsername(planWork.getPlan_to());
+		//接收人姓名
+		planWork.setPlan_update((String)result.get("wxname"));
+		//更新时间
+		planWork.setPlan_updatetime(sdf.format(new Date()));
+		//标记,申报标记为1申报状态,2同意,3不同意
+		planWork.setPlan_flag("1");
+		//如果保存成功返回1，重新刷新前台页面，不等于1，则返回报错页面
+		if (ps.savePlanWork(planWork)==1){
+			mav.setViewName("redirect:/mainContent");
+		}else {
+			mav.setViewName("redirect:/500.jsp");
+		}
+		
+		return mav;
+		

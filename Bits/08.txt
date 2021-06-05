@@ -1,0 +1,16 @@
+function starYxj (parmNum){
+	setStar(parmNum,"#starYxj","star");
+	$("#plan_yxj").val(parmNum);
+}
+function setStar(parmNum,id,shape){
+	//复位星级
+	for (var i=1;i<=5;i++){
+		$(id+i).removeClass("glyphicon-"+shape);
+		$(id+i).addClass("glyphicon-"+shape+"-empty");
+	}
+	//设置星级
+	for (var i=1;i<=parmNum;i++){
+		$(id+i).removeClass("glyphicon-"+shape+"-empty");
+		$(id+i).addClass("glyphicon-"+shape);
+	}
+}

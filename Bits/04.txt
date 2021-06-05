@@ -1,0 +1,29 @@
+<div class="container-fluid">
+			<div id="warp">
+				<div id="leftMeun" class="leftMeun" >
+					<!--  左侧导航区  -->
+				</div>
+				<div id="rightContent">
+					<!--  这里是工作区，使用Javascript插入iframe标签  -->
+				</div>
+			</div>
+</div>
+	
+    <script src="<%=basePath %>bootstrap-3.3.5-dist/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" 
+    src="<%=basePath %>bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+	    +function ($) {
+	    	$(function (){
+              //获取屏幕高度
+	    		var bodyHeight = window.screen.height-180;
+              //获取屏幕宽度
+	    		var bodyWidth = window.screen.width-220;
+              //定义一个iframe 
+	    		var iframeHtml = "<iframe id=\"content\" name=\"content\" width=\""
+	    		+bodyWidth+"\" height=\""+bodyHeight+"\" style=\"border: 0px;\" "
+	    		+"src=\"<%=basePath %>mainContent\" ></iframe>";
+			$("#rightContent").html(iframeHtml);
+	    	})
+	    }(jQuery);
+    </script>

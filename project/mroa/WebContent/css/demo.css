@@ -1,0 +1,343 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: outside none none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+    content: none;
+}
+:focus {
+    outline: 0 none;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+body {
+    background: #f5f5f5 none repeat scroll 0 0;
+    color: #333;
+    font-family: "Kreon";
+    font-weight: 300;
+}
+#switcher {
+    background: #000 none repeat scroll 0 0;
+    height: 54px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+.center {
+    padding-top: 0;
+    width: 100%;
+}
+.center ul li {
+    display: inline;
+    float: left;
+    position: relative;
+}
+.logoTop, .top2 {
+    color: #fff;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+@media screen and (max-width: 1082px) {
+#sj {
+    display: none;
+}
+#sj2 {
+    display: none;
+}
+}
+.top2 {
+    background-image: url("img/2vm.png");
+    background-position: 3px center;
+    background-repeat: no-repeat;
+    border: 1px solid #414141;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 16px;
+    padding-left: 25px;
+    padding-right: 5px;
+    position: relative;
+}
+.vm {
+    background-color: #fff;
+    display: none;
+    height: 170px;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    top: 20px;
+    width: 150px;
+}
+.top2:hover .vm {
+    display: block;
+}
+.logoTop a:hover {
+    text-decoration: underline;
+}
+.center ul li ul {
+    background: #10100f none repeat scroll 0 0;
+    border: 1px solid #323024;
+    border-radius: 4px;
+    display: none;
+    font-family: "Droid Serif",serif;
+    line-height: 18px;
+    margin-left: 17px;
+    padding-bottom: 3px;
+    position: absolute;
+    width: 313px;
+}
+.center ul li ul li {
+    margin: 0 0 1px 4px;
+    padding: 5px;
+    width: 271px;
+}
+.center ul li ul li a {
+    color: #c4beab;
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 210px;
+}
+.center ul li ul li .tag {
+    background: rgba(0, 0, 0, 0) url("sel-sp-act.png") no-repeat scroll 0 0;
+    color: #c4beab;
+    display: block;
+    float: left;
+    font-size: 10px;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 8px 0 0;
+    text-align: center;
+    white-space: nowrap;
+    width: 50px;
+}
+.center ul li ul li a span.link {
+    display: block;
+    float: left;
+    height: 22px;
+    overflow: hidden;
+    width: 209px;
+}
+.center ul li ul li:hover {
+    background: rgba(0, 0, 0, 0) url("sel-act.png") no-repeat scroll 0 0;
+}
+.center ul li ul li:hover a {
+    color: #f8bc06;
+}
+.center ul li ul li:hover .tag {
+    color: #f8bc06;
+}
+.center ul li ul li:first-child {
+    margin-top: 3px;
+}
+li.device-resolution {
+    color: #ada58b;
+    font-family: "Cambria";
+    font-size: 12px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+li.purchase {
+    float: right !important;
+    margin-top: 11px;
+}
+li.purchase a {
+    background: rgba(0, 0, 0, 0) url("trolley2.png") no-repeat scroll 0 0;
+    display: block;
+    height: 36px;
+    padding: 0;
+    transition: all 0.3s ease-out 0s;
+    width: 133px;
+}
+li.purchase a:hover {
+    background-position: 0 -36px;
+}
+li.remove_frame {
+    float: right !important;
+    margin-left: 17px;
+    margin-right: 30px;
+}
+li.remove_frame a {
+    background: rgba(0, 0, 0, 0) url("img/cross2.png") no-repeat scroll 0 0;
+    display: block;
+    height: 21px;
+    margin-top: 18px;
+    transition: all 0.3s ease-out 0s;
+    width: 20px;
+}
+li.remove_frame a:hover {
+    background-position: 0 -21px;
+}
+#iframe {
+    margin-top: 0;
+}
+.icon-monitor, .icon-tablet, .icon-mobile-1, .icon-mobile-2, .icon-mobile-3 {
+    height: 16px;
+    margin-right: 7px;
+    margin-top: 20px;
+    width: 17px;
+}
+.icon-monitor {
+    background-image: url("img/mon-spr.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+.icon-tablet {
+    background: rgba(0, 0, 0, 0) url("img/mon-spr.png") no-repeat scroll -24px 0;
+}
+.icon-mobile-1 {
+    background: rgba(0, 0, 0, 0) url("img/mon-spr.png") no-repeat scroll -49px 0;
+}
+.icon-monitor:hover, .icon-monitor.active {
+    background-position: 0 -16px;
+}
+.icon-tablet:hover, .icon-tablet.active {
+    background-position: -24px -16px;
+}
+.icon-mobile-1:hover, .icon-mobile-1.active {
+    background-position: -49px -16px;
+}
+.icon-mobile-2 {
+    background: rgba(0, 0, 0, 0) url("img/mon-spr.png") no-repeat scroll -71px 0;
+}
+.icon-mobile-3 {
+    background: rgba(0, 0, 0, 0) url("img/mon-spr.png") no-repeat scroll -94px 0;
+}
+.icon-mobile-2:hover, .icon-mobile-2.active {
+    background-position: -71px -16px;
+}
+.icon-mobile-3:hover, .icon-mobile-3.active {
+    background-position: -94px -16px;
+}
+#iframe-wrap {
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    top: 54px;
+    z-index: 50;
+}
+.tablet-width {
+    background: rgba(0, 0, 0, 0) url("img/bg-mob.png") no-repeat scroll 0 0;
+    height: 960px !important;
+    margin: 40px auto 0;
+    padding: 175px 100px 115px;
+    width: 785px;
+}
+.tablet-width iframe {
+    height: 960px !important;
+}
+.mobile-width {
+    background: rgba(0, 0, 0, 0) url("img/bg-mob.png") no-repeat scroll 0 -1249px;
+    height: 703px !important;
+    margin: 40px auto 0;
+    padding: 165px 115px 100px 100px;
+    width: 1041px;
+}
+.mobile-width iframe {
+    height: 704px !important;
+}
+.mobile-width-2 {
+    background: rgba(0, 0, 0, 0) url("img/bg-mob.png") no-repeat scroll 0 -2217px;
+    height: 417px !important;
+    margin: 40px auto 0;
+    padding: 125px 25px 159px;
+    width: 337px;
+}
+.mobile-width-2 iframe {
+    height: 416px !important;
+}
+.mobile-width-3 {
+    background: rgba(0, 0, 0, 0) url("img/bg-mob.png") no-repeat scroll -387px -2217px;
+    height: 256px !important;
+    margin: 40px auto 0;
+    padding: 45px 115px 69px 105px;
+    width: 497px;
+}
+.mobile-width-3 iframe {
+    height: 256px !important;
+}
+.by {
+    overflow-y: hidden;
+}
+.fdad {
+    animation: 1.5s ease 2s normal both 1 running flipInX;
+    background-color: #fff;
+    height: 280px;
+    opacity: 0.7;
+    position: fixed;
+    right: 25px;
+    top: 64px;
+    width: 336px;
+    z-index: 888;
+}
+@keyframes flipInX {
+0% {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+}
+40% {
+    transform: perspective(400px) rotateX(-10deg);
+}
+70% {
+    transform: perspective(400px) rotateX(10deg);
+}
+100% {
+    opacity: 0.7;
+    transform: perspective(400px) rotateX(0deg);
+}
+}
+.fdl {
+    color: #ccc;
+    float: left;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 5px;
+}
+.fdr {
+    background-color: #ccc;
+    cursor: pointer;
+    float: right;
+    font-family: Arial;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fdadnr {
+}

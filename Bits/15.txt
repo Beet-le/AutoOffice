@@ -1,0 +1,8 @@
+	@RequestMapping(value="findAllMemorandum")
+	@ResponseBody
+	public Map<String,Object> findAllMemorandum (HttpServletRequest request){
+		//获取session中的用户名，以用户名为条件查找数据。
+		String username = (String)request.getSession().getAttribute("UserName");
+         //返回备忘录数据
+		return memoService.selectMemorandum(username);
+	}
