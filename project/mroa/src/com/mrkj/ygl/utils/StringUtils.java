@@ -1,8 +1,4 @@
-/**
- * 明日科技
- * 于国良 2016-06-29
- * QQ:80303857
- */
+
 package com.mrkj.ygl.utils;
 
 import java.io.UnsupportedEncodingException;

@@ -1,8 +1,4 @@
-/**
- * 明日科技
- * 于国良 2016-06-29
- * QQ:80303857
- */
+
 package com.mrkj.ygl.utils;
 
 import java.io.UnsupportedEncodingException;
@@ -14,15 +10,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringEscapeUtils;
 
-/**
- * 封装各种格式的编码解码工具类.
- * 1.Commons-Codec的 hex/base64 编码
- * 2.自制的base62 编码
- * 3.Commons-Lang的xml/html escape
- * 4.JDK提供的URLEncoder
- * @author calvin
- * @version 2013-01-15
- */
+
 public class Encodes {
 
 	private static final String DEFAULT_URL_ENCODING = "UTF-8";
@@ -46,16 +34,12 @@ public class Encodes {
 		}
 	}
 
-	/**
-	 * Base64编码.
-	 */
+
 	public static String encodeBase64(byte[] input) {
 		return new String(Base64.encodeBase64(input));
 	}
 	
-	/**
-	 * Base64编码.
-	 */
+
 	public static String encodeBase64(String input) {
 		try {
 			return new String(Base64.encodeBase64(input.getBytes(DEFAULT_URL_ENCODING)));
@@ -71,16 +55,11 @@ public class Encodes {
 //		return Base64.encodeBase64URLSafe(input);
 //	}
 
-	/**
-	 * Base64解码.
-	 */
+
 	public static byte[] decodeBase64(String input) {
 		return Base64.decodeBase64(input.getBytes());
 	}
-	
-	/**
-	 * Base64解码.
-	 */
+
 	public static String decodeBase64String(String input) {
 		try {
 			return new String(Base64.decodeBase64(input.getBytes()), DEFAULT_URL_ENCODING);
@@ -89,9 +68,7 @@ public class Encodes {
 		}
 	}
 
-	/**
-	 * Base62编码。
-	 */
+
 	public static String encodeBase62(byte[] input) {
 		char[] chars = new char[input.length];
 		for (int i = 0; i < input.length; i++) {
@@ -100,23 +77,17 @@ public class Encodes {
 		return new String(chars);
 	}
 
-	/**
-	 * Html 转码.
-	 */
+
 	public static String escapeHtml(String html) {
 		return StringEscapeUtils.escapeHtml4(html);
 	}
 
-	/**
-	 * Html 解码.
-	 */
+
 	public static String unescapeHtml(String htmlEscaped) {
 		return StringEscapeUtils.unescapeHtml4(htmlEscaped);
 	}
 
-	/**
-	 * Xml 转码.
-	 */
+
 	public static String escapeXml(String xml) {
 		return StringEscapeUtils.escapeXml10(xml);
 	}

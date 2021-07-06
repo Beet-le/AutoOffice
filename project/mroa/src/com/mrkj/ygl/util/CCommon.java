@@ -1,8 +1,4 @@
-/**
- * 明日科技
- * 于国良 2016-06-29
- * QQ:80303857
- */
+
 package com.mrkj.ygl.util;
 
 import java.io.File;
@@ -11,11 +7,7 @@ import java.lang.reflect.Field;
 import org.apache.commons.lang3.StringUtils;
 
 public class CCommon {
-	/**
-	 * 打印异常信息
-	 * @param method 方法名称
-	 * @param e 异常对象
-	 */
+
 	public static void printException(String method, Exception e) {
 		if (method != null)
 			System.out.println(method);
