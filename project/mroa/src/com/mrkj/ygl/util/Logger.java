@@ -1,15 +1,7 @@
-/**
- * 明日科技
- * 于国良 2016-06-29
- * QQ:80303857
- */
+
 package com.mrkj.ygl.util;
 
-/**
- * @description 自定义log对象
- * @author 	shikl
- * @date 	2015-9-24 下午3:36:31
- */
+
 public class Logger {
 
 	private org.apache.log4j.Logger logger;

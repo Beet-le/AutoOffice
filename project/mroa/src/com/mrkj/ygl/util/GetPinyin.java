@@ -1,8 +1,4 @@
-﻿/**
- * 明日科技
- * 于国良 2016-06-29
- * QQ:80303857
- */
+﻿
 package com.mrkj.ygl.util;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
@@ -11,13 +7,7 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
-/**
- * @explain:
- * 
- * @author: shikl
- * 
- * @version:
- */
+
 public class GetPinyin {
 
 	/**
